@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet">
+        <script src="myscripts.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> 
+       
+    </head>
+
+    <body>
+
+        <div><h1>Ride My Way App</h1></div>
+        hi
+           
+        <hr>
+        <div >
+         Please select one of the options below: <br> <br>
+           <button type="button" onclick="document.getElementById('driver').style.display='block'" class="button">Offer a Ride</button>
+           <button type="button" onclick="document.getElementById('driver').style.display='block'" class="button">Request for a Ride</button>
+        </div>
+
+    <div  id = "driver"class= "hiddenform">
+        <form  class = "formcontent">
+    <label for="to"><b>To ? </b></label> <br>
+    <input type="text" name="to" placeholder="Where to?" required> <br><br>
+    <label for="fro"><b>From?:</b></label> <br>
+    <input type="text" name="password" placeholder="Where are you setting off from ?" required><br><br>
+    <label for="availableseats"><b>Available Seats:</b></label> <br>
+    <input type="text" name="availableseats" placeholder="How many seats available" required> <br><br>
+    <label for="numberplate"><b>Car Number Plate:</b></label> <br>
+    <input type="text" name="numberplate" placeholder="Enter Car number plate" required><br><br>
+        </form>
+    </div>
+    </body>
+</html>

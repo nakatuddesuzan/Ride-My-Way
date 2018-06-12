@@ -1,0 +1,159 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+*{box-sizing: border-box}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+h2{
+    color:rgb(12, 12, 12);
+    font-family: lobster;
+}
+
+input[type=password] {
+    background: #f1f1f1;
+    padding: 15px;
+    width: 30%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    }
+
+select ,input[type=text] {
+    background: #f1f1f1;
+    padding: 15px;
+    width: 30%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    }
+.left {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        text-align: left;
+    }
+.right {
+        float: right;
+        width: 50%;
+        padding: 00;
+        text-align: 50% left;
+    
+    }
+link{
+    color:dodgerblue;
+
+
+}
+.div_login{
+    text-align: center;
+    widows: 100%;
+    padding:00px;
+    height:300px;
+
+}
+
+h1{
+    text-align: center;
+    color: blue;
+    font-family: sans-serif;
+}
+.button {
+    background-color:rgb(33, 105, 33);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity:0.8 ;
+}
+.button:hover {
+    opacity:1;
+}
+.btn-group button {
+    border: 1px black; 
+    color: white; 
+    padding: 10px 24px;
+    cursor: pointer; 
+    float: left;
+    width:50%;
+    opacity: 0.8;
+}
+.btn-group button:hover {
+    opacity: 1;
+}
+
+.cancelbtn {
+    background-color: #f44336;
+    width:50%;
+    }
+.signupbtn{
+    background-color: green;
+    float:right;
+    
+}
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+        }
+    }
+
+.hiddenform {
+    text-align: center;
+    display: none;
+    background-color:rgb(69, 65, 73);
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    padding-top: 50px;
+}
+
+.formcontent{
+    background-color: white;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%;
+    height:1200px; 
+}
+
+.container {
+    padding: 16px;
+}
+
+.optiondiv{
+    text-align:center;
+}
+
+.profile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  
+.profile1 {
+    color: grey;
+    font-size: 19px;
+  }
+
+  
