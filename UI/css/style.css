@@ -5,7 +5,7 @@ body{
 *{box-sizing: border-box}
 hr {
     border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 h2{
     color:rgb(12, 12, 12);
@@ -131,7 +131,44 @@ h1{
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 80%;
-    height:1200px; 
+    height:1100px; 
+}
+
+.driverform{
+    background-color: white;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 50%;
+    height:820px; 
+}
+.driverbtn{
+    background-color: green;
+    border: 1px black; 
+    color: white; 
+    padding: 10px 24px;
+    cursor: pointer; 
+    float: left;
+    width:100%;
+    opacity:0.8;    
+}
+
+.close {
+    position: absolute;
+    right: 50px;
+    font-size: 50px;
+    top: 15px;
+    font-weight: bold;
+    color: red;
+    opacity: 0.8;
+}
+
+.close:hover{
+    opacity: 1.0;
+}
+
+
+.driverbtn:hover{
+    opacity: 1.0;
 }
 
 .container {
@@ -144,16 +181,32 @@ h1{
 
 .profile {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 500px;
     margin: auto;
     text-align: center;
     font-family: arial;
+    padding-top: 50px;
+    background-color: white;
+    height: 500px;
+    
   }
 
   
 .profile1 {
     color: grey;
     font-size: 19px;
+  }
+.contactbutton{
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
   }
 
   

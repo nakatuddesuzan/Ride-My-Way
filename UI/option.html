@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet">
+        <script src="myscripts.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> 
+       
+    </head>
+
+    <body>
+
+        <div><h1>Ride My Way App</h1></div>
+           
+        <hr>
+        <div >
+         Please select one of the options below: <br> <br>
+       <b>1.</b>  <a href="#" onclick="document.getElementById('driver').style.display='block'">Offer a ride</a><br><br>
+       <b>2.</b> <a href="#" onclick="document.getElementById('#').style.display='block'">Request for a ride</a><br><br>
+       <b>3.</b> <a href="#" onclick="document.getElementById('#').style.display='block'"> View Available Ride Offers </a><br><br>
+       <b>4.</b> <a href="#" onclick="document.getElementById('#').style.display='block'"> View Ride requests</a><br><br>
+       <b>5.</b> <a href="#" > View App Users</a><br><br>
+       <b>5.</b> <a href="profile.html" > View My profile</a><br><br>
+        </div>
+
+    <div  id = "driver"class= "hiddenform">
+            <span onclick="document.getElementById('driver').style.display='none'" class="close">&times;</span>
+    <form  class = "driverform">
+    <div class="container">
+            <h1>Ride Details</h1>
+            <p>Please fill in this form to set your ride details to be viewed by the passengers</p>
+            <hr>
+    <br><br>
+    <label for="to"><b>To ? </b></label> <br>
+    <input type="text" name="to" placeholder="Where are you heading to?" required> <br><br>
+
+    <label for="fro"><b>From?:</b></label> <br>
+    <input type="text" name="fro" placeholder="Where are you setting off from ?" required><br><br>
+
+    <label for="setofftime"><b>Set off time:</b></label><br>
+    <input type="text" placeholder="At what time are you setting off?" name="setofftime" required><br><br>
+
+    <label for="freeseats"><b>Available Free Seats:</b></label> <br>
+    <input type="text" name="availableseats" placeholder="How many available seats?" required> <br><br>
+
+    <label for="numberplate"><b>Car Number Plate:</b></label> <br>
+    <input type="text" name="numberplate" placeholder="Enter Car number plate" required><br><br>
+
+    <button type="submit" class="driverbtn">Offer a Ride</button>
+    </div>
+    </form>
+    </div>
+    </body>
+</html>
