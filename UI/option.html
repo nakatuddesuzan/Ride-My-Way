@@ -8,8 +8,8 @@
 
     <body>
     <div class="tab">
-            <a href="option.html"><button>Home</button></a>
-        <a href="README.md"><button>About</button></a>
+        <a href="option.html"><button>Home</button></a>
+        <button onclick="document.getElementById('about').style.display='block'">About</button>
         <div class="right">
         <a href="profile.html"><button>My Profile</button></a>
         </div>
@@ -17,6 +17,7 @@
         <div>
         <h1>Welcome</h1> <br> <br>
         </div>
+        <div>
             <div class="link">
            <a href="#" onclick="document.getElementById('driver').style.display='block'">Offer a ride</a><br><br> 
            <a href="#" onclick="document.getElementById('passenger').style.display='block'">Request for a ride</a><br><br>
@@ -29,7 +30,7 @@
                 <a href="#" onclick="document.getElementById('appusers').style.display='block'">Application Users</a><br><br>
                 <a href="login.html">Sign Out</a>
            </div>
-        
+        </div>
 
     <div  id = "driver"class= "hiddenform">
             <span onclick="document.getElementById('driver').style.display='none'" class="close">&times;</span>
@@ -454,7 +455,15 @@
         </table>
         </form>
         </div>
-    </div>
+
+        <div class="about" id="about">
+            <form class="">
+                <p>Ride-my App is a carpooling application that provides drivers with the ability to create ride offers</p>
+                <p>with the ability to create ride offer and passengers to join available ride offers</p>
+                <p>Find us on facebook</p>
+            </form>
+        </div>
+    
     
     </body>
 </html>

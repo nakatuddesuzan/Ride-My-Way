@@ -1,8 +1,6 @@
 
         body{background-color:white;
             background: url("../images/car2.jpg");
-            height: 100%;
-            width:100%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -42,11 +40,17 @@
             color:rgb(12, 12, 12);
             font-family: sans-serif;
         }
+        input[type=email] {
+            background: #f1f1f1;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            }
         
         input[type=password] {
             background: #f1f1f1;
             padding: 15px;
-            width: 30%;
             margin: 5px 0 22px 0;
             display: inline-block;
             border: none;
@@ -55,7 +59,7 @@
         select ,input[type=text] {
             background: #f1f1f1;
             padding: 15px;
-            width: 30%;
+
             margin: 5px 0 22px 0;
             display: inline-block;
             border: none;
@@ -343,4 +347,20 @@
         }
         tr:nth-child(odd) {
             background-color: rgb(240, 164, 164);
+        }
+
+        .about {
+            background-color:whitesmoke;
+            text-align: right;
+            display: none;
+            position: fixed; 
+            z-index: 1; 
+            margin: 5% auto 15% auto; 
+            border: 1px solid #888;
+            left: 0;
+            top: 0; 
+            overflow: auto; 
+            font-family: lobster;
+            color:black;
+            font-size: 16px;
         }
