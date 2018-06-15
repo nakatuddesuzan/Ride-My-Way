@@ -1,57 +1,84 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-}
+body{background-color:white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    }
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    margin-left: 0%;
+    outline: none;
+    padding: 5px 5px;
+    font-size: 20px;
+    color: blue;
+    margin-left: 35%;
+    }
+.tab button:hover {
+    background-color: #ddd;
+    }
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
 *{box-sizing: border-box}
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 26px;
-}
+
 h2{
     color:rgb(12, 12, 12);
-    font-family: lobster;
+    font-family: sans-serif;
 }
 
 input[type=password] {
     background: #f1f1f1;
     padding: 15px;
-    width: 30%;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    text-align: center;
     }
+input[type=email] {
+    background: #f1f1f1;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    text-align: center;
+        }
 
 select ,input[type=text] {
     background: #f1f1f1;
     padding: 15px;
-    width: 30%;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    text-align: center;
     }
 .left {
         float: left;
-        width: 50%;
-        padding: 10px;
         text-align: left;
     }
 .right {
         float: right;
-        width: 50%;
-        padding: 00;
-        text-align: 50% left;
+        text-align:left;
     
     }
-link{
-    color:dodgerblue;
-
-
+.elementlink{
+    color:black;
+    font-size: 18px;
 }
 .div_login{
     text-align: center;
     widows: 100%;
     padding:00px;
-    height:300px;
 
 }
 
@@ -131,7 +158,7 @@ h1{
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 80%;
-    height:1100px; 
+    height:1000px; 
 }
 
 .driverform{
@@ -161,6 +188,15 @@ h1{
     color: red;
     opacity: 0.8;
 }
+.close1 {
+    position: absolute;
+    right: 50px;
+    font-size: 25px;
+    top: 15px;
+    font-weight: bold;
+    color: red;
+    opacity: 0.8;
+}
 
 .close:hover{
     opacity: 1.0;
@@ -179,19 +215,51 @@ h1{
     text-align:center;
 }
 
-.profile {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    padding-top: 50px;
-    background-color: white;
-    height: 500px;
+.profilecard {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  height:440px;
     
   }
+.image{
+    width: 100%;
+    height:80%;
+      
+}
+.h1{
+    color:white;
+}
+.profilediv{
+    text-align:left;
+}
 
-  
+.profileform {
+    text-align: center;
+    display: block;
+    background-color:rgb(69, 65, 73);
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    padding-top: 50px;
+}
+
+.profilecontent{
+    background-color: white;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%;
+    height:650px; 
+    text-align: left;
+}
+
+
 .profile1 {
     color: grey;
     font-size: 19px;
@@ -209,4 +277,47 @@ width: 100%;
 font-size: 18px;
   }
 
-  
+.picturebox{
+    background-color: lightgrey;
+    width: 100px;
+    border: solid black;
+    padding: 00 px;
+    margin: 25px;
+    float : left;
+}
+
+.hiddenform1 {
+    text-align: center;
+    display: none;
+    background-color:white;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    padding-top: 50px;
+}
+
+.picturetext{
+text-align: left;
+}
+
+.acceptbtn {
+    background-color:rgb(33, 105, 33);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity:0.8 ;
+}
+.acceptbtn:hover {
+    opacity:1;
+}
+
