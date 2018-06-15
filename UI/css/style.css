@@ -1,5 +1,4 @@
 body{background-color:white;
-    background: url("../images/car2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +7,7 @@ body{background-color:white;
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: white;
+    background-color: whitesmoke;
     }
 
 .tab button {
@@ -73,8 +72,8 @@ select ,input[type=text] {
     
     }
 .elementlink{
-    color:blue;
-    font-size:25px; 
+    color:black;
+    font-size: 18px;
 }
 .div_login{
     text-align: center;
@@ -159,7 +158,7 @@ h1{
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 80%;
-    height:950px; 
+    height:1000px; 
 }
 
 .driverform{
@@ -184,6 +183,15 @@ h1{
     position: absolute;
     right: 50px;
     font-size: 50px;
+    top: 15px;
+    font-weight: bold;
+    color: red;
+    opacity: 0.8;
+}
+.close1 {
+    position: absolute;
+    right: 50px;
+    font-size: 25px;
     top: 15px;
     font-weight: bold;
     color: red;

@@ -1,9 +1,10 @@
 
         body{background-color:white;
-            background: url("../images/car2.jpg");
+            background: url("../images/car4.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 100%;
             }
         .tab {
             overflow: hidden;
@@ -170,7 +171,7 @@
             margin: 5% auto 15% auto; 
             border: 1px solid #888;
             width: 50%;
-            height:740px; 
+            height:800px; 
         }
         .driverbtn{
             background-color: green;
@@ -316,16 +317,16 @@
             opacity:1;
         }
         .link{
-             background-color: rgb(141, 189, 140);
+            background-color:whitesmoke;
              width: 15%;
         }
         .link1{
-            background-color:pink;
+            background-color:whitesmoke;
             width:15%;
             margin-left:40%;
         }
         .link2{
-            background-color:white;
+            background-color:whitesmoke;
             width:15%;
             margin-left: 80%;
         }
