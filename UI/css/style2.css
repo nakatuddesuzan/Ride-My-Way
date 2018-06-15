@@ -1,12 +1,38 @@
 
-body{background-color:white;
-    background: url("../images/car.jpg");
-    height: 100%;
-    width:100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-        }
+        body{background-color:white;
+            background: url("../images/car2.jpg");
+            height: 100%;
+            width:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #cccccc;
+            background-color: whitesmoke;
+            }
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            color:black;
+            }
+        .tab button:hover {
+            background-color: #ddd;
+            }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            }
+            
         *{box-sizing: border-box}
         hr {
             border: 1px solid #f1f1f1;
@@ -14,7 +40,7 @@ body{background-color:white;
         }
         h2{
             color:rgb(12, 12, 12);
-            font-family: lobster;
+            font-family: sans-serif;
         }
         
         input[type=password] {
@@ -61,7 +87,7 @@ body{background-color:white;
             color: blue;
             font-family: sans-serif;
         }
-        .button {
+        button {
             background-color:rgb(33, 105, 33);
             border: none;
             color: white;
@@ -74,22 +100,22 @@ body{background-color:white;
             cursor: pointer;
             opacity:0.8 ;
         }
-        .button:hover {
+        button:hover {
             opacity:1;
         }
-        .btn-group button {
-            border: 1px black; 
-            color: white; 
-            padding: 10px 24px;
-            cursor: pointer; 
-            float: left;
-            width:50%;
-            opacity: 0.8;
+        .rejectbtn{
+            background-color:red;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            opacity:0.8 ;
         }
-        .btn-group button:hover {
-            opacity: 1;
-        }
-        
         .cancelbtn {
             background-color: #f44336;
             width:50%;
@@ -140,7 +166,7 @@ body{background-color:white;
             margin: 5% auto 15% auto; 
             border: 1px solid #888;
             width: 50%;
-            height:820px; 
+            height:740px; 
         }
         .driverbtn{
             background-color: green;
@@ -300,3 +326,21 @@ body{background-color:white;
             margin-left: 80%;
         }
         
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 0px;
+            text-align: center;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(164, 164, 240);
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(240, 164, 164);
+        }

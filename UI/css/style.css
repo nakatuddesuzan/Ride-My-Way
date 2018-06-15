@@ -1,15 +1,40 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
+    background: url("../images/car2.jpg");
 }
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: white;
+    }
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    margin-left: 0%;
+    outline: none;
+    padding: 5px 5px;
+    font-size: 20px;
+    color: blue;
+    margin-left: 35%;
+    }
+.tab button:hover {
+    background-color: #ddd;
+    }
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
 *{box-sizing: border-box}
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 26px;
-}
+
 h2{
     color:rgb(12, 12, 12);
-    font-family: lobster;
+    font-family: sans-serif;
 }
 
 input[type=password] {
@@ -19,7 +44,17 @@ input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    text-align: center;
     }
+input[type=email] {
+    background: #f1f1f1;
+    padding: 15px;
+    width: 30%;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    text-align: center;
+        }
 
 select ,input[type=text] {
     background: #f1f1f1;
@@ -28,6 +63,7 @@ select ,input[type=text] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
+    text-align: center;
     }
 .left {
         float: left;
@@ -127,7 +163,7 @@ h1{
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 80%;
-    height:1100px; 
+    height:950px; 
 }
 
 .driverform{
