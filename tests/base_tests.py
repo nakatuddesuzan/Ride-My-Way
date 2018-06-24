@@ -30,7 +30,8 @@ class BaseTestCase(unittest.TestCase):
     def SignUP(self, first_name, second_name, user_name, contact,email, password):
         return self.client.post('api/user/signup',
             data=json.dumps({'first_name':'first_name', 'second_name':'second_name', 'user_name':'user_name',
-        'email': 'email','contact':'contact', 'password':'password' })
+        'email': 'email','contact':'contact', 'password':'password' },content_type='application/json'
+        )
                                 )
 
     def login_user(self, email, password):

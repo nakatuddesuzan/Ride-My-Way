@@ -1,8 +1,8 @@
 from flask import Response
 import json
 from app.api.user_model.user import User
-import unittest
-from unittest import TestCase
+from tests.base_tests import BaseTestCase
+
 from tests.base_tests import BaseTestCase
 class Tests_Ride_offers(BaseTestCase):
     def test_add_offer_successfully(self):
@@ -16,6 +16,4 @@ class Tests_Ride_offers(BaseTestCase):
             self.assertEqual(res.status_code, 400)
             self.assertEqual(data1.get('message'), "Ride offer already created")
             
-if __name__ == '__main__':
-    unittest.main()
 
