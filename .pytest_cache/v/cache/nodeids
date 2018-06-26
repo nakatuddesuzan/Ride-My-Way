@@ -1,0 +1,3 @@
+[
+  "tests/test_auth.py::Test_auth::test_successful_signup"
+]

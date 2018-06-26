@@ -10,31 +10,47 @@
 
         <link href="../css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> 
-    </head>
-        <body>
-            <div class="tab">
-                <h1>Ride My Way App</h1> 
+
+        <div id="index" >
+            <div class="header" >
+                <h1 style="color: black", class="h1">Ride My Way App</h1>
             </div>
 
-        <div class="div_login" id="login">
-        <form class="container">
-        <span onclick="myWindow = window.close('login.html')" class="close1">&times;</span> 
-            <div >
-                <h2>Sign In</h2> <br><br>
-                <label for="email"><b>Email:</b></label> <br>
+        <div class="topnav">
+            <a href="#" onclick="document.getElementById('index').style.display='block'">Home</a>
+            <div class="right">
+            <a href="#" onclick="document.getElementById('login').style.display='block'" class="elementlink">Sign in</a>
+            <a href="#" onclick="document.getElementById('newuser').style.display='block'" class="elementlink">Sign up</a>
+            <a href="#">About us</a>
+            <a href="#">Follow us on Twitter</a>
+            </div>
+        </div>
+        <div>
+        
+    </head>
+        <body>
+        <p class="p">Ride-my App is a carpooling application that provides<br> 
+            drivers with the ability to create ride offers
+        and passengers to join available ride offers.</p>
+        </div>
+            
+        
+        <div id="login" class='login_border' >
+        <form >
+            <div class="container" >
+                <br><br>
                 <input type="email" name="email" placeholder="Email Address" required> <br><br>
-                <label for="password"><b>Password:</b></label> <br>
                 <input type="password" name="password" placeholder=" User Password" required><br><br>
                 <input type="submit" value="Log in" class="button" name="login" onclick="window.location='option.html';"><br><br>
-                <a href="#" onclick="document.getElementById('newuser').style.display='block'" class="elementlink">Sign up</a>
-                
+                <span onclick="document.getElementById('login').style.display='none'" class="close1">&times;</span>
             </div>
         </form>
         </div>
             
-        <div class="hiddenform" id ="newuser">
-            <span onclick="document.getElementById('newuser').style.display='none'" class="close">&times;</span>
+        <div class="transbox" id ="newuser">
+        
         <form class="formcontent">
+            <span onclick="document.getElementById('newuser').style.display='none'" class="close">&times;</span>
             <div class="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
@@ -50,12 +66,10 @@
               <div class="btn-group">
               <button type="button" onclick="document.getElementById('newuser').style.display='none'" class="cancelbtn">Cancel</button>
               <button type="submit" onclick="alert('Thank You for Registering'), document.getElementById('newuser').style.display='none'" class="signupbtn">Sign Up</button>
-              </div>
-              </div>
+            </div>
+        </div>
         </form>
         </div>
-
         
         </body>
-    
 </html>

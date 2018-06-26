@@ -8,7 +8,9 @@ PORT='5000'
 
 
 offers = []
+
 global id
+id=0
 if len(offers)==0:
     id = len(offers)+1
 else:

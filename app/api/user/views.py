@@ -1,7 +1,7 @@
 import os
 import sys
 from flask import request
-from flask import current_app
+from app import app
 from flask import jsonify, make_response,Flask
 import re
 import json
@@ -10,7 +10,7 @@ import json
 from ..user_model.user import User
 user_list = []
 
-@current_app.route('/api/user/login', methods=['POST'])
+@app.route('/api/user/login')
 class Login(User):
     def post (self):
         email= request.json['email']
@@ -26,7 +26,7 @@ class Login(User):
                                               }), 200)
         return make_response(jsonify({"message": "wrong email or password"}), 401)
 
-@current_app.route('/api/user/signup', methods=['POST'])
+@app.route('/api/user/signup', methods=["POST"])
 class SignUp (User):
     def post (self):
         first_name = request.json(['first_name'], type=str)

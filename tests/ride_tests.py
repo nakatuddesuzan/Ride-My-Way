@@ -15,5 +15,5 @@ class Tests_Ride_offers(BaseTestCase):
             data1 = json.loads(res.data.decode())
             self.assertEqual(res.status_code, 400)
             self.assertEqual(data1.get('message'), "Ride offer already created")
-            
+        
 

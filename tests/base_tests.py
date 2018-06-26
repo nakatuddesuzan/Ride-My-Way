@@ -3,17 +3,17 @@ from flask import current_app
 import unittest
 import json
 from app import app_config
-from app import app
-from app.api.rides.request_rides import requests
+from app import app, create_app
+from app.api.Rides.request_rides import requests
 from app.api.user.views import user_list
-from app.api.rides.add_rides import offers
+from app.api.Rides.add_rides import offers
     
 class BaseTestCase(unittest.TestCase):
     def create_app(self):
         """
         Create an instance of the app with the testing configuration
         """
-        current_app.config.from_object(app_config["testing"])
+        app = create_app("testing")
         return app
 
     def setUp(self):
@@ -28,21 +28,17 @@ class BaseTestCase(unittest.TestCase):
         offers[:] = []
 
     def SignUP(self, first_name, second_name, user_name, contact,email, password):
-        return self.client.post('api/user/signup',
-            data=json.dumps({'first_name':'first_name', 'second_name':'second_name', 'user_name':'user_name',
-        'email': 'email','contact':'contact', 'password':'password' },content_type='application/json'
-        )
-                                )
-
+        return self.client.post('/api/user/signup', 
+        data=json.dumps(dict(first_name=first_name, second_name=second_name, user_name=user_name,
+        email=email,contact=contact, password=password)))
+        
     def login_user(self, email, password):
         """
         Method for logging a user with dummy data
         """
         return self.client.post('/api/user/login',
-             data=json.dumps( { "email":"email","password":"password" } )
-        )
-
-           
+             data=json.dumps( { "email":email,"password":password } )
+        )       
 
     def get_user_token(self):
         """

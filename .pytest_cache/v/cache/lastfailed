@@ -1,0 +1,9 @@
+{
+  "tests/test_auth.py::Test_auth::test_invalid_username_onsignup": true,
+  "tests/test_auth.py::Test_auth::test_successful_login": true,
+  "tests/test_auth.py::Test_auth::test_successful_signup": true,
+  "tests/test_auth.py::Test_auth::test_username_with_characters_onsignup": true,
+  "tests/test_auth.py::Test_auth::test_when_invalid_email_onsignup": true,
+  "tests/test_auth.py::Test_auth::test_when_no_password_onsignup": true,
+  "tests/test_auth.py::Test_auth::test_when_short_password_onsignup": true
+}
