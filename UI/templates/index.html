@@ -13,15 +13,15 @@
 
         <div id="index" >
             <div class="header" >
-                <h1 style="color: black", class="h1">Ride My Way App</h1>
+               <h1 style="color:black">Welcome</h1> 
             </div>
 
         <div class="topnav">
             <a href="#" onclick="document.getElementById('index').style.display='block'">Home</a>
             <div class="right">
-            <a href="#" onclick="document.getElementById('login').style.display='block'" class="elementlink">Sign in</a>
-            <a href="#" onclick="document.getElementById('newuser').style.display='block'" class="elementlink">Sign up</a>
-            <a href="#">About us</a>
+            <a href="#"  class="elementlink" id="mySignIn">Sign in</a>
+            <a href="#" class="elementlink" id="mySignUp">Sign up</a>
+            <a href="#" class="elementlink" id="myAbout">About us</a>
             <a href="#">Follow us on Twitter</a>
             </div>
         </div>
@@ -29,47 +29,147 @@
         
     </head>
         <body>
-        <p class="p">Ride-my App is a carpooling application that provides<br> 
+        <br><br><br><br>
+        <h1 class="h1">Ride My Way App</h1>
+        <br><br><br><br>
+
+        <p class="p">This is a carpooling application that provides<br> 
             drivers with the ability to create ride offers
         and passengers to join available ride offers.</p>
         </div>
-            
-        
-        <div id="login" class='login_border' >
-        <form >
-            <div class="container" >
-                <br><br>
-                <input type="email" name="email" placeholder="Email Address" required> <br><br>
-                <input type="password" name="password" placeholder=" User Password" required><br><br>
-                <input type="submit" value="Log in" class="button" name="login" onclick="window.location='option.html';"><br><br>
-                <span onclick="document.getElementById('login').style.display='none'" class="close1">&times;</span>
-            </div>
-        </form>
+         
+        <div>
+
+        <div id="myAboutModal" class="modal">
+        <div class="modal-content">
+        <span class="close_About"></span>
+        <br>
+            <b>Name: Sue Company Limited<br><br></b>
+            <b>Location: Bweyogerere <br><br></b>
+            <b>Contact :0774 868529 <br><br></b>
+            <b>proffesion: Software Development <br><br></b>
+            <b>Email:sue@gmail.com<br><br></b>
+            <b>Working hours: 24hrs</b>
+        </div>
+        </div>
+        <!-- Sign In Modal -->
+		<div id="mySignInModal" class="modal">
+
+            <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close_signin">&times;</span>
+        <br>
+              
+        <h3>LOGIN BELOW:</h3>
+            <input type="email" name="email" placeholder="Email Address" required> <br><br>
+            <input type="password" name="password" placeholder=" User Password" required><br><br>
+            <input type="submit" value="Log in" class="button" name="login" onclick="window.location='option.html';"><br><br>
+        </div>
         </div>
             
-        <div class="transbox" id ="newuser">
+        <!-- Sign Up Modal -->
+		<div id="mySignUpModal" class="modal">
         
-        <form class="formcontent">
-            <span onclick="document.getElementById('newuser').style.display='none'" class="close">&times;</span>
-            <div class="container">
-              <h1>Sign Up</h1>
+         <!-- Modal content -->
+		<div class="modal-content">
+			<span class="close_signup"></span>
               <p>Please fill in this form to create an account.</p>
               <hr>
               <input type="text" placeholder="Enter First Name" name="first name" required><br><br>
-              <input type="text" placeholder="Enter Sir Name" name="sirname" required><br><br>
+              <input type="text" placeholder="Enter Sur Name" name="sirname" required><br><br>
               <input type="text" placeholder="Enter User Name" name="username" required><br><br>
               <input type="email" placeholder="Enter Email" name="email" required><br><br>
-              <input type="text" placeholder="Enter Phone Number" name="mobile" optional><br><br>
-              <input type="text" placeholder="Enter Place of Residence" name="residence" required><br><br>
               <input type="password" placeholder="Enter Password" name="psw" required><br><br>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br><br>
               <div class="btn-group">
-              <button type="button" onclick="document.getElementById('newuser').style.display='none'" class="cancelbtn">Cancel</button>
-              <button type="submit" onclick="alert('Thank You for Registering'), document.getElementById('newuser').style.display='none'" class="signupbtn">Sign Up</button>
+              <button type="button" onclick="document.getElementById('mySignUpModal').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" onclick="alert('Thank You for Registering'), document.getElementById('mySignUpModal').style.display='none'" class="signupbtn">Sign Up</button>
             </div>
         </div>
-        </form>
         </div>
         
-        </body>
+        <script>
+            // Get the Sign In modal
+            var modal_1 = document.getElementById('mySignInModal');
+
+                    // Get the button that opens the modal
+            var btn_1 = document.getElementById("mySignIn");
+    
+            // Get the <span> element that closes the modal
+            var span_1 = document.getElementsByClassName("close_signin")[0];
+    
+            // When the user clicks the button, open the modal 
+            btn_1.onclick = function() {
+                modal_1.style.display = "block";
+            }
+    
+            // When the user clicks on <span> (x), close the modal
+            span_1.onclick = function() {
+                modal_1.style.display = "none";
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal_1) {
+                    modal_1.style.display = "none";
+                }
+            }
+            
+            // Get the Sign Up modal
+            var modal_2 = document.getElementById('mySignUpModal');
+    
+            // Get the button that opens the modal
+            var btn_2 = document.getElementById("mySignUp");
+    
+            // Get the <span> element that closes the modal
+            var span_2 = document.getElementsByClassName("close_signup")[0];
+    
+            // When the user clicks the button, open the modal 
+            btn_2.onclick = function() {
+                modal_2.style.display = "block";
+            }
+    
+            // When the user clicks on <span> (x), close the modal
+            span_2.onclick = function() {
+                modal_2.style.display = "none";
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal_2) {
+                    modal_2.style.display = "none";
+                }
+            }
+
+            // Get the About modal
+            var modal_3 = document.getElementById('myAboutModal');
+    
+            // Get the button that opens the modal
+            var btn_3 = document.getElementById("myAbout");
+
+            // Get the <span> element that closes the modal
+            var span_3 = document.getElementsByClassName("close_About")[0];
+
+            // When the user clicks the button, open the modal 
+            btn_3.onclick = function() {
+                modal_3.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span_3.onclick = function() {
+                modal_3.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal_3) {
+                    modal_3.style.display = "none";
+                }
+            }
+            
+            
+        </script>
+    
+            
+    </body>
 </html>

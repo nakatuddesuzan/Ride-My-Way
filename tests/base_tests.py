@@ -1,19 +1,15 @@
-from flask import Flask
-from flask import current_app
 import unittest
 import json
-from app import app_config
-from app import app, create_app
-from app.api.Rides.request_rides import requests
-from app.api.user.views import user_list
-from app.api.Rides.add_rides import offers
-    
+from app import app_config, app
+from app.api.offers.views import offer_list
+from app.api.requests.views import request_list
+
 class BaseTestCase(unittest.TestCase):
     def create_app(self):
         """
         Create an instance of the app with the testing configuration
         """
-        app = create_app("testing")
+        app.config.from_object(app_config["testing"])
         return app
 
     def setUp(self):
@@ -23,45 +19,89 @@ class BaseTestCase(unittest.TestCase):
         """
         Drop the data structure data
         """
-        requests[:] = []
-        user_list[:] = []
-        offers[:] = []
+        request_list[:] = []
+        offer_list[:]=[]
 
-    def SignUP(self, first_name, second_name, user_name, contact,email, password):
-        return self.client.post('/api/user/signup', 
-        data=json.dumps(dict(first_name=first_name, second_name=second_name, user_name=user_name,
-        email=email,contact=contact, password=password)))
-        
-    def login_user(self, email, password):
-        """
-        Method for logging a user with dummy data
-        """
-        return self.client.post('/api/user/login',
-             data=json.dumps( { "email":email,"password":password } )
-        )       
-
-    def get_user_token(self):
-        """
-        Returns a user token
-        """
-        response = self.login_user("sue@gmail.com", "1132018")
-        data = json.loads(response.data.decode())
-        return data['token']
-
-    def add_ride_offer(self,driver_name, number_plate, destination,depature,departure_time,contact):
+    def add_request(self, destination, setting_from, departure_time, seats_needed):
         """
         Function to create a request
         """
-        return self.client.post( '/api/v1/rides/',
-            data=json.dumps({'driver_name':'driver_name', 'number_plate':'number_plate', 'destination':'destination',
-            'departure': 'departure' , 'departure_time':'departure_time', 'contact':'contact'})
-            ,
-            content_type='application/json'
+        return self.client.post(
+            '/api/v1/requests',
+            data=json.dumps(
+                dict(
+                    destination=destination,
+                    setting_from=setting_from,
+                    departure_time=departure_time,
+                    seats_needed=seats_needed
+                )
+            ),
+            content_type='application/json',
+    
         )
-
-    def get_ride_offers(self, token):
+    def get_requests(self):
         """
         function to return get
         """
-        return self.client.get( headers=({"token": token}))
+        return self.client.get('/api/v1/requests')
 
+    def get_one_request(self):
+        """
+        function to return get
+        """
+        return self.client.get('/api/v1/requests/{}'.format(id))
+
+    def put_request(self,destination, setting_from, departure_time, seats_needed):
+        """
+        function to edit a request
+        """
+        return self.client.put('/api/v1/requests/{}'.format(id),
+                               data=json.dumps(dict(
+                                    destination=destination,
+                                    setting_from=setting_from,
+                                    departure_time=departure_time,
+                                    seats_needed=seats_needed)),
+                             content_type='application/json')
+
+    
+    def add_offer(self, number_plate,destination, setting_from, departure_time, seats_available):
+        """
+        Function to create an offer
+        """
+        return self.client.post(
+            'api/v1/requests',
+            data=json.dumps(
+                dict(
+                    number_plate=number_plate,
+                    destination=destination,
+                    setting_from=setting_from,
+                    departure_time=departure_time,
+                    seats_available=seats_available
+                )
+            ),
+            content_type='application/json'
+        )
+    def get_offers(self):
+        """
+        function to return get
+        """
+        return self.client.get('api/v1/offers')
+
+    def get_one_offer(self):
+        """
+        function to return get
+        """
+        return self.client.get('api/v1/offers/{}'.format(id))
+
+    def put_offer(self,number_plate,destination, setting_from, departure_time, seats_available):
+        """
+        function to edit an offer
+        """
+        return self.client.put('/api/v1/offers/{}'.format(id),
+                               data=json.dumps(dict(
+                                    number_plate=number_plate,
+                                    destination=destination,
+                                    setting_from=setting_from,
+                                    departure_time=departure_time,
+                                    seats_available=seats_available)),
+                             content_type='application/json')

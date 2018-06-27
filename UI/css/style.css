@@ -5,6 +5,7 @@ body{background-color:#f1f1f1;;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    width: 100%;
     pointer-events: auto;
     position:relative;
 
@@ -24,33 +25,33 @@ h2{
 
 input[type=password] {
     background: #f1f1f1;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 5px;
+    margin: 5px 0 5px 0;
     display: inline-block;
-    width: 50%;
+    width: 95%;
     border: none;
-    text-align: center;
+    text-align: left;
     color: #000;
     }
 input[type=email] {
     background: #f1f1f1;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 5px;
+    margin: 5px 0 5px 0;
     display: inline-block;
     border: none;
-    width: 50%;
-    text-align: center;
+    width: 95%;
+    text-align: left;
     color: #000;
         }
 
 select ,input[type=text] {
     background: #f1f1f1;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    width: 50%;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    width: 95%;
     display: inline-block;
     border: none;
-    text-align: center;
+    text-align: left;
     color: #000;
     }
 
@@ -115,7 +116,7 @@ h1{text-align: center;
 }
 
 .cancelbtn {
-    background-color: gray;
+    background-color: rgb(53, 48, 48);
     width:50%;
     }
 .signupbtn{
@@ -155,7 +156,7 @@ h1{text-align: center;
     background-color: white;
     margin: 5% auto 15% auto; 
     border: 1px solid white;
-    width: 50%;
+    width: 400px;
     height:100%;
     text-align: center;
     color: white;
@@ -316,7 +317,7 @@ text-align: left;
 /* login hidden form */
 .login_border{
     display: none;
-    width:40%;
+    width:400px;
     margin :0px auto;
     border:1px solid white;
     min-height:100%;
@@ -331,7 +332,7 @@ text-align: left;
 .header {
     background-color:white;
     text-align: center;
-    padding: 20px;
+    padding: 3px;
 }
 /* Style the top navigation bar */
 .topnav {
@@ -356,7 +357,25 @@ text-align: left;
 }
 
 @media screen and (max-width:600px) {
+    .topnav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    head {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
     body {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    head {
         width: 100%;
     }
 }
@@ -375,15 +394,16 @@ text-align: left;
 }
  /* transparent box */
 .transbox {
-    margin: 0px;
-    background-color: #ffffff;
-    border: 1px solid black;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    display:none;
-    width: 100%; 
-    height: 100%; 
-    float:center;
+	display: none;
+    width:400px;
+    margin :0px auto;
+    border:1px solid white;
+    min-height:100%;
+    position:relative;
+    border-radius:2px;
+    background-color: white;
+    float: center;  
+    text-align:center;
     pointer-events: auto;
 
   }
@@ -393,3 +413,51 @@ text-align: left;
         width: 100%;
     }
 }
+
+  /* Use a media query to add a breakpoint at 800px: */
+  @media screen and (max-width: 600px) {
+  .modal-content {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+	
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 350px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+	

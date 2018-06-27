@@ -325,6 +325,12 @@ tr:nth-child(odd) {
         width: 100%;
     }
 }
+
+@media screen and (max-width:600px) {
+    head {
+        width: 100%;
+    }
+}
 /* Style the footer */
 .footer {
     background-color: #f1f1f1;
@@ -356,7 +362,7 @@ tr:nth-child(odd) {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 18px 16px;
+    padding: 18px 18px;
     text-decoration: none;
     top:0px;
 }
