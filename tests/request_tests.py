@@ -31,7 +31,7 @@ class Tests_Requests(BaseTestCase):
             self.assertEqual(response.status_code, 404)
 
     def test_get_no_request_by_id(self):
-        """Tests when a request is not found by id"""
+        """Tests when a request is not found using id"""
         with self.client:
             self.add_request("", "", "","")
             response = self.get_one_request()
