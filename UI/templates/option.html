@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../css/style2.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> 
+    
+    <div class="header" >
+    <h1 class="h1">Ride My Way App</h1>
+    <h2 class="h2">Your most reliable Ride App</h2>
+    </div>
+
+    <div class="topnav" >
+            <a href="#">Home</a>
+        <div class='right'>
+            <a href="#" onclick="document.getElementById('driver').style.display='block'">Offer a ride</a> 
+            <a href="#" onclick="document.getElementById('passenger').style.display='block'">Request for a ride</a>
+            <a href="#" onclick="document.getElementById('availableoffers').style.display='block'"> View Available Ride Offers</a>
+            <a href="#" onclick="document.getElementById('requests').style.display='block'"> View Ride requests</a>
+            
+            <a href="#" onclick="document.getElementById('appusers').style.display='block'">Application Users</a>
+            <a href="login.html">Sign Out</a>  
+        </div>
+    </div>
+        
+       
+    </head>
+
+    <body>
+    <div>
+        <h1>Your History</h1>
+        <p>All Rides (7)  </body> 
+        <p>Rides Taken (3)  </p>
+        <p> Rides given(4)  </p>
+    <div>
+        <table class="table">
+        <th>No.  </th>
+        <th>Date  </th> 
+        <th>Ref No. </th>
+        <th>Action</th>
+        <tr>
+        <td> 1</td> 
+        <td> 23/5/2018</td> 
+        <td>#ref001</td> 
+        <td>View more...</td>  
+        </tr>
+        <tr>
+        <td> 2</td> 
+        <td> 23/5/2018</td> 
+        <td>#ref001</td> 
+        <td>View more...</td>  
+        </tr>
+        <tr>
+        <td> 3</td> 
+        <td> 23/5/2018</td> 
+        <td>#ref001</td> 
+        <td>View more...</td>  
+        </tr>
+        <tr>
+        <td> 6</td> 
+        <td> 23/5/2018</td> 
+        <td>#ref001</td> 
+        <td>View more...</td>  
+        </tr>
+
+        <tr>
+        <td> 7</td> 
+        <td> 23/5/2018</td> 
+        <td>#ref001</td> 
+        <td>View more...</td>  
+        </tr>
+
+        </table>
+    </div> 
+</div>
+    
+
+    <div  id = "driver"class= "hiddenform">
+            <span onclick="document.getElementById('driver').style.display='none'" class="close">&times;</span>
+    <form  class = "driverform">
+    <div class="container">
+            <h1>Ride Details</h1>
+            <p>Please fill in this form to set your ride details to be viewed by the passengers</p>
+            <hr>
+    <br><br>
+        <input type="text" name="to" placeholder="Where are you heading to?" required> <br><br>
+        <input type="text" name="fro" placeholder="Where are you setting off from ?" required><br><br>
+        <input type="text" placeholder="At what time are you setting off?" name="setofftime" required><br><br>
+        <input type="text" name="availableseats" placeholder="How many available seats?" required> <br><br>
+        <input type="text" name="numberplate" placeholder="Enter Car number plate" required><br><br>
+        <button type="submit" class="driverbtn">Offer a Ride</button>
+    </div>
+    </form>
+    </div>
+
+    <div  id = "passenger"class= "hiddenform">
+            <span onclick="document.getElementById('passenger').style.display='none'" class="close">&times;</span>
+    <form  class = "driverform">
+    <div class="container">
+            <h1>Ride Details</h1>
+            <p>Please fill in this form to create a request for a ride</p>
+            <hr>
+            <br><br>  
+        <input type="text" name="pickupplace" placeholder="Where are you now?" required> <br><br>
+        <input type="text" name="placeheaded" placeholder="Where are heading to?" required><br><br>
+        <input type="text" placeholder="At what time are you setting off?" name="setofftime" required><br><br>
+        <input type="text" name="availableseats" placeholder="How many available free seats needed?" required> <br><br>
+        <input type="text" name =search placeholder="search for a driver"><br>
+        <button type="submit" class="button">Search </button><br><br>
+        <a href ="#">Make Request public</a>
+
+    </div>
+    </form>
+    </div>
+
+        <div  id = "availableoffers"class="hiddenform">
+                <span onclick="document.getElementById('availableoffers').style.display='none'" class="close">&times;</span>
+        <form class= "container" >
+            <h2>AVAILABLE RIDE OFFERS</h2>
+
+        <table>
+        <tr>
+            <th>DRIVER'S NAME</th>
+            <th>CAR NUMBER PLATE</th>
+            <th>FROM</th>
+            <th>TO</th>
+            <th>SET OFF TIME</th>
+            <th>CONTACT</th>
+            <th>SELECT</th>
+        </tr>
+        <tr>
+            <td>Martin</td>
+            <td>UAY 960T</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Matthew</td>
+            <td>UAY 960Z</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Noah</td>
+            <td>UAY 960A</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Magic</td>
+            <td>UAY 965S</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Shanice</td>
+            <td>UAY 960J</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Suzan</td>
+            <td>UAY 960K</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+            </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>UAY 960S</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">REQUEST</button></td>
+        </tr>
+
+        </table>
+        </form>
+        </div>
+
+        <div  id = "requests"class="hiddenform">
+                <span onclick="document.getElementById('requests').style.display='none'" class="close">&times;</span>
+        <form class= "container" >
+            <h2>AVAILABLE RIDE REQUESTS</h2>
+
+        <table>
+        <tr>
+            <th>PASSENGER'S NAME</th>
+            <th>FROM</th>
+            <th>TO</th>
+            <th>SET OFF TIME</th>
+            <th>FREE SEATS NEEDED</th>
+            <th>CONTACT</th>
+            <th>RESPONSE</th>
+        </tr>
+        <tr>
+            <td>Martin</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>1</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Matthew</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>4</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Noah</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>2</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Magic</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>1</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Shanice</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>6</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+        </tr>
+        <tr>
+            <td>Suzan</td>
+            <td>Kampala</td>
+            <td>Bweyogerere</td>
+            <td>3</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>8</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>14</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>2</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+            </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>4</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>2</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>Kampala</td>
+            <td>Ndeeba</td>
+            <td>1</td>
+            <td><input type ="datetime"></td>
+            <td>0774868529</td>
+            <td><button type ="submit">ACCEPT</button>
+                <button type ="submit" class="rejectbtn">REJECT</button>
+            </td>
+        </tr>
+
+        </table>
+        </form>
+        </div>
+
+
+        <div  id = "appusers"class="hiddenform">
+                <span onclick="document.getElementById('appusers').style.display='none'" class="close">&times;</span>
+        <form class= "container" >
+            <h2>AVAILABLE RIDE REQUESTS</h2>
+
+        <table>
+        <tr>
+            <th>NAME</th>
+            <th>CONTACT</th>
+            <th>EMAIL</th>
+            <th>PLACE OF RESIDENCE</th>
+            <th>FRIENDLY REQUEST</th>
+        </tr>
+        <tr>
+            <td>Martin</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Mpererwe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Matthew</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Masaka</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+            </td>
+        </tr>
+        <tr>
+            <td>Noah</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Nansana</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+            </td>
+        </tr>
+        <tr>
+            <td>Magic</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Bwaise</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Shanice</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Entebe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Suzan</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Entebe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Kawempe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+            </td>
+        </tr>
+        <tr>
+            <td>Liam</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Ntinda</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Rose</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Kyambogo</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Micheal</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Entebe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+        <tr>
+            <td>Malaika</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Namugongo</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+            </td>
+        </tr>
+        <tr>
+            <td>Patrick</td>
+            <td>+256 773456890</td>
+            <td>nakatuddesusan@gmail.com</td>
+            <td>Entebe</td>
+            <td><button type ="submit">ADD FRIEND</button></td>
+        </tr>
+
+        </table>
+        </form>
+        </div>
+
+    
+    
+    </body>
+</html>
