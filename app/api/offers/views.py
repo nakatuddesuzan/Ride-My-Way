@@ -22,30 +22,33 @@ class AddOffer(Resource):
         parser.add_argument('seats_available', type=str , required=False)
     
         args = parser.parse_args()
-        number_plate = args['number_plate']
-        destination = args['destination']
-        setting_from = args['setting_from']
-        departure_time= args['departure_time']
-        seats_available= args['seats_available']
-        
-        global id
-        if len(offer_list)==0:
-            id = len(offer_list)+1
-        else:
-            id = id+1
+        if args:
+            number_plate = args['number_plate']
+            destination = args['destination']
+            setting_from = args['setting_from']
+            departure_time= args['departure_time']
+            seats_available= args['seats_available']
+            
+            global id
+            if len(offer_list)==0:
+                id = len(offer_list)+1
+            else:
+                id = id+1
 
-        new_offer = Offer(id,number_plate, destination, setting_from, departure_time,seats_available)
+            new_offer = Offer(id,number_plate, destination, setting_from, departure_time,seats_available)
 
-        for offer in offer_list:
-            if id == offer['id']:
-                return make_response(jsonify({"message": '0ffer  already made'}), 400)
-        offer = json.loads(new_offer.json())
-        offer_list.append(offer)
-        return make_response(jsonify({
-            'message': 'Offer successfully made and poosted',
-            'status': 'success'},
-        ), 201)
-    
+            for offer in offer_list:
+                if id == offer['id']:
+                    return make_response(jsonify({"message": 'Offer  already made'}), 400)
+            offer = json.loads(new_offer.json())
+            offer_list.append(offer)
+            return make_response(json.dumps({
+                'id': id,
+                'message': 'Offer successfully made and posted',
+                'status': 'success'},
+            ), 201)
+        return make_response(jsonify({"message": 'Offer is empty'}), 400)
+
 
 
 class EditOffer(Resource):
@@ -87,13 +90,14 @@ class GetOffers(Resource):
         if my_offers:
             return make_response(jsonify({"offers": my_offers,
                                     "status": "success"}), 200)
-        return make_response(jsonify({"message": "No requests found"}), 404)
+        else:
+            return make_response(jsonify({"message": "No offers found"}), 404)
 
 
 class GetOneOffer(Resource):
     def get(self, offer_id):
         for offer in offer_list:
-            if int(offer['id']) == int(offer_id):
+            if offer['id'] == int(offer_id):
                 offers_data = {
                         "id": offer["id"],
                         "number_plate": offer['number_plate'],
@@ -102,6 +106,6 @@ class GetOneOffer(Resource):
                         "departure_time": offer['departure_time'],
                         "seats_available": offer['seats_available']
                     }
-                return make_response(jsonify({"offers": offers_data,
-                                    "status": "success"}), 200)
-        return make_response(jsonify({"message": "No offers found"}), 404)
+                return make_response(json.dumps({"offers": offers_data,
+                                        "message": "success"}), 200)
+        return make_response(json.dumps({"message": "No offers found"}), 404)
