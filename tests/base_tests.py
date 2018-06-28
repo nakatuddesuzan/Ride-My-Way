@@ -45,7 +45,7 @@ class BaseTestCase(unittest.TestCase):
         """
         return self.client.get('/api/v1/requests')
 
-    def get_one_request(self):
+    def get_one_request(self, id):
         """
         function to return get
         """
@@ -69,7 +69,7 @@ class BaseTestCase(unittest.TestCase):
         Function to create an offer
         """
         return self.client.post(
-            'api/v1/requests',
+            '/api/v1/offers',
             data=json.dumps(
                 dict(
                     number_plate=number_plate,
@@ -87,13 +87,13 @@ class BaseTestCase(unittest.TestCase):
         """
         return self.client.get('api/v1/offers')
 
-    def get_one_offer(self):
+    def get_one_offer(self, id):
         """
         function to return get
         """
         return self.client.get('api/v1/offers/{}'.format(id))
 
-    def put_offer(self,number_plate,destination, setting_from, departure_time, seats_available):
+    def put_offer(self,id,number_plate,destination, setting_from, departure_time, seats_available):
         """
         function to edit an offer
         """
