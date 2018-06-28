@@ -21,30 +21,33 @@ class AddRequest(Resource):
         parser.add_argument('setting_from', type=str, required=True)
         parser.add_argument('departure_time', required=True)
         parser.add_argument('seats_needed', type=int , required=False)
-        
+    
         args = parser.parse_args()
-        destination = args['destination']
-        setting_from = args['setting_from']
-        departure_time= args['departure_time']
-        seats_needed= args['seats_needed']
-        
-        global id
-        if len(request_list)==0:
-            id = len(request_list)+1
-        else:
-            id = id+1
+        if args:
+            destination = args['destination']
+            setting_from = args['setting_from']
+            departure_time= args['departure_time']
+            seats_needed= args['seats_needed']
+            
+            global id
+            if len(request_list)==0:
+                id = len(request_list)+1
+            else:
+                id = id+1
 
-        new_request = Request(id, destination, setting_from, departure_time,seats_needed)
+            new_request = Request(id, destination, setting_from, departure_time,seats_needed)
 
-        for request in request_list:
-            if id == request['id']:
-                return make_response(jsonify({"message": 'Request successfully made and posted'}), 400)
-        request = json.loads(new_request.json())
-        request_list.append(request)
-        return make_response(jsonify({
-            'message': 'Request successfully made and posted',
-            'status': 'success'},
-        ), 201)
+            for request in request_list:
+                if id == request['id']:
+                    return make_response(jsonify({"message": 'Request successfully made and posted'}), 400)
+                request = json.loads(new_request.json())
+                request_list.append(request)
+            return make_response(json.dumps({
+                    'id': id,
+                    'message': 'Request successfully made and posted',
+                    'status': 'success'},
+                ), 201)
+        return make_response(jsonify({"message": 'Request is empty'}), 400)
 
 
 class EditRequest(Resource):
@@ -79,7 +82,7 @@ class GetRequests(Resource):
                     "seats_needed": request['seats_needed']
                 }
             my_requests.append(requests_data)
-        if my_requests:
+        if my_requests: 
             return make_response(jsonify({"requests": my_requests,
                                     "status": "success"}), 200)
         return make_response(jsonify({"message": "No requests found"}), 404)
