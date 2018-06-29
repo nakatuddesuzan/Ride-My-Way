@@ -1,0 +1,25 @@
+[report]
+omit = 
+    */concurrent/*
+    */html/*
+    */flask/*
+    */multiprocessing/*
+    */http/*
+    */click/*
+    */asyncio/*
+    */werkzeug/*
+    */markupsafe/*
+    */colorama/*
+    */encodings/*
+    */flask_restful/*
+    */jinja2/*
+    */ctypes/*
+    *decimal.py
+    *mimetypes.py
+    *numbers.py
+    *stringprep.py
+    *six.py
+    *itsdangerous.py
+    *hmac.py
+    *uuid.py
+
