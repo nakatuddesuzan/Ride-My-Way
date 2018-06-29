@@ -45,7 +45,7 @@ class AddRequest(Resource):
             return make_response(json.dumps({
                     'id': id,
                     'message': 'Request successfully made and posted',
-                    'status': 'success'},
+                    'status': 'success'}
                 ), 201)
         return make_response(jsonify({"message": 'Request is empty'}), 400)
 
